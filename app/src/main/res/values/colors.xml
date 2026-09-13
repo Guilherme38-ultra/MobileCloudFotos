@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Identidade do app -->
+    <color name="marinho">#FF102542</color>
+    <color name="marinho_claro">#FF1D3D63</color>
+    <color name="ambar">#FFF6A623</color>
+    <color name="ambar_escuro">#FFC97F0B</color>
+    <color name="coral">#FFE23E57</color>
+
+    <!-- Superfícies e texto (tema claro) -->
+    <color name="fundo">#FFF2F4F8</color>
+    <color name="superficie">#FFFFFFFF</color>
+    <color name="superficie_fraca">#FFE8ECF3</color>
+    <color name="texto_forte">#FF12203A</color>
+    <color name="texto_medio">#FF5B6980</color>
+    <color name="texto_fraco">#FF8D99AD</color>
+    <color name="divisor">#FFDDE3EC</color>
+    <color name="placeholder_imagem">#FFDCE2EC</color>
+</resources>

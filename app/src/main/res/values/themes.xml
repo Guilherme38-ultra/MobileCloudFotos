@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.TikTokTech" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/marinho</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/marinho_claro</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
+        <item name="colorSecondary">@color/ambar</item>
+        <item name="colorOnSecondary">@color/marinho</item>
+        <item name="colorSecondaryContainer">@color/ambar</item>
+        <item name="colorOnSecondaryContainer">@color/marinho</item>
+
+        <item name="android:colorBackground">@color/fundo</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/texto_forte</item>
+        <item name="colorSurfaceVariant">@color/superficie_fraca</item>
+        <item name="colorOnSurfaceVariant">@color/texto_medio</item>
+        <item name="colorOutline">@color/divisor</item>
+
+        <item name="android:statusBarColor">@color/marinho</item>
+        <item name="android:navigationBarColor">@color/fundo</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.TikTokTech" parent="Base.Theme.TikTokTech" />
+
+    <!-- ===== Estilos reaproveitados nas telas ===== -->
+
+    <style name="Texto.Titulo" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Widget.TikTokTech.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/marinho</item>
+        <item name="titleTextAppearance">@style/Texto.Titulo</item>
+        <item name="navigationIconTint">@color/white</item>
+    </style>
+
+    <style name="Widget.TikTokTech.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/superficie</item>
+    </style>
+
+    <style name="Widget.TikTokTech.Botao" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/ambar</item>
+        <item name="android:textColor">@color/marinho</item>
+        <item name="iconTint">@color/marinho</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="Widget.TikTokTech.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeColor">@color/marinho</item>
+        <item name="hintTextColor">@color/texto_medio</item>
+        <item name="android:textColorHint">@color/texto_fraco</item>
+    </style>
+
+    <style name="Contador" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">22dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/texto_medio</item>
+    </style>
+
+    <!-- Arredonda só o topo da foto, para casar com o canto do card -->
+    <style name="Imagem.TopoArredondado" parent="">
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+</resources>

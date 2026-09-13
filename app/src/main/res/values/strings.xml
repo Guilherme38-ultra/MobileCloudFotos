@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TikTokTech</string>
+    <string name="titulo_comentarios">Comentários</string>
+
+    <!-- ==========================================================
+         PREENCHA COM OS SEUS DADOS DO CLOUDINARY (veja o README)
+         ========================================================== -->
+    <string name="cloudinary_cloud_name">SEU_CLOUD_NAME</string>
+    <string name="cloudinary_upload_preset">SEU_UPLOAD_PRESET</string>
+
+    <!-- Feed -->
+    <string name="feed_vazio">Nenhuma publicação ainda.\nToque na câmera para começar.</string>
+    <string name="acao_nova_foto">Nova foto</string>
+    <string name="desc_foto_publicacao">Foto da publicação</string>
+    <string name="acao_like">Curtir</string>
+    <string name="acao_dislike">Não curtir</string>
+    <string name="acao_comentar">Comentar</string>
+    <string name="acao_voltar">Voltar</string>
+
+    <!-- Nova publicação -->
+    <string name="titulo_nova_publicacao">Nova publicação</string>
+    <string name="hint_legenda">Escreva uma legenda…</string>
+    <string name="acao_publicar">Publicar</string>
+    <string name="acao_cancelar">Cancelar</string>
+
+    <!-- Comentários -->
+    <string name="sem_comentarios">Seja o primeiro a comentar.</string>
+    <string name="hint_seu_nome">Seu nome</string>
+    <string name="hint_comentario">Escreva um comentário…</string>
+    <string name="autor_anonimo">Anônimo</string>
+
+    <!-- Mensagens -->
+    <string name="msg_captura_cancelada">Captura cancelada.</string>
+    <string name="msg_sem_foto">Tire uma foto primeiro.</string>
+    <string name="msg_publicado">Publicado!</string>
+    <string name="msg_comentario_vazio">Escreva um comentário.</string>
+    <string name="msg_post_invalido">Publicação não encontrada.</string>
+    <string name="msg_erro_upload">Erro ao enviar a imagem: %1$s</string>
+    <string name="msg_erro_salvar">Erro ao salvar: %1$s</string>
+    <string name="msg_erro_feed">Erro ao carregar o feed: %1$s</string>
+    <string name="msg_erro_voto">Erro ao registrar o voto: %1$s</string>
+    <string name="msg_erro_comentario">Erro ao comentar: %1$s</string>
+</resources>

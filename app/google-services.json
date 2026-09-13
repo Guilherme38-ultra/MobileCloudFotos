@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1073738809681",
+    "project_id": "tiktoktech-fd82d",
+    "storage_bucket": "tiktoktech-fd82d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073738809681:android:11d9317d17334b37415370",
+        "android_client_info": {
+          "package_name": "com.aula.tiktoktech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO-jnWj1ZGlQnzO77f-9NRnLORKKAm_jg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

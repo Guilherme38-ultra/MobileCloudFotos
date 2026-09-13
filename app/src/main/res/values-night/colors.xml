@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mesmos nomes do tema claro, valores para o modo escuro -->
+<resources>
+    <color name="marinho">#FF0A1626</color>
+    <color name="marinho_claro">#FF16293F</color>
+    <color name="ambar">#FFFFB74A</color>
+    <color name="ambar_escuro">#FFF6A623</color>
+    <color name="coral">#FFFF6B80</color>
+
+    <color name="fundo">#FF0B1220</color>
+    <color name="superficie">#FF16202F</color>
+    <color name="superficie_fraca">#FF1F2B3D</color>
+    <color name="texto_forte">#FFE9EEF7</color>
+    <color name="texto_medio">#FFA9B5C7</color>
+    <color name="texto_fraco">#FF7C8798</color>
+    <color name="divisor">#FF25334A</color>
+    <color name="placeholder_imagem">#FF243146</color>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Informa ao FileProvider qual pasta pode ser compartilhada com o app de câmera.
+    path="." corresponde à pasta de getExternalFilesDir(null).
+-->
+<paths>
+    <external-files-path
+        name="fotos"
+        path="." />
+</paths>

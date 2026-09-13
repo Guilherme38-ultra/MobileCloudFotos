@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout de UM item do feed.
+    Estrutura: foto, legenda e a linha de ações (like / dislike / comentar).
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.TikTokTech.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- A imagem é carregada pelo Glide a partir da URL do Cloudinary -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/fundo_imagem"
+            android:contentDescription="@string/desc_foto_publicacao"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/Imagem.TopoArredondado"
+            tools:src="@drawable/fundo_imagem" />
+
+        <TextView
+            android:id="@+id/txtDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/texto_forte"
+            android:textSize="15sp"
+            tools:text="Primeira aula de Android com Cloudinary." />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/divisor" />
+
+        <!-- Linha de ações -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="4dp">
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/acao_like"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_coracao_contorno" />
+
+            <TextView
+                android:id="@+id/txtLikes"
+                style="@style/Contador"
+                android:text="0" />
+
+            <ImageButton
+                android:id="@+id/btnDislike"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/acao_dislike"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_polegar_baixo" />
+
+            <TextView
+                android:id="@+id/txtDislikes"
+                style="@style/Contador"
+                android:text="0" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnComentario"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/acao_comentar"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_comentario" />
+
+            <TextView
+                android:id="@+id/txtComentarios"
+                style="@style/Contador"
+                android:text="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
