@@ -8,10 +8,12 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 import com.cloudinary.android.MediaManager;
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.callback.UploadCallback;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +22,21 @@ public class MainActivity extends AppCompatActivity {
     private static final String UPLOAD_PRESET = "nome_do_upload";
     private static final String FOLDER = "nome_do_diretório";
     private static boolean cloudinaryConfigurado = false;
+//    Escolher da galeria
+    private FloatingActionButton fabGaleria;
+//    Abrir câmera e tirar foto
     private FloatingActionButton fabNovaFoto;
     private ProgressBar progress;
     private TextView txtVazio;
+    private Uri fotoUri;
     private final ActivityResultLauncher<String> selecionarFoto =
             registerForActivityResult(new ActivityResultContracts.GetContent(), uri -> {
                 if (uri != null) enviarFoto(uri);
+            });
+
+    private final ActivityResultLauncher<Uri> cameraLauncher =
+            registerForActivityResult(new ActivityResultContracts.TakePicture(), tirouFoto -> {
+                if (tirouFoto != null && tirouFoto) enviarFoto(fotoUri);
             });
 
     @Override
@@ -34,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         fabNovaFoto = findViewById(R.id.fabNovaFoto);
+        fabGaleria = findViewById(R.id.fabGaleria);
         progress = findViewById(R.id.progress);
         txtVazio = findViewById(R.id.txtVazio);
         configurarCloudinary();
@@ -42,10 +54,11 @@ public class MainActivity extends AppCompatActivity {
         txtVazio.setVisibility(View.VISIBLE);
         txtVazio.setTextIsSelectable(true);
         progress.setVisibility(View.GONE);
-        fabNovaFoto.setOnClickListener(v -> selecionarFoto.launch("image/*")
-        );
+        fabGaleria.setOnClickListener(v -> selecionarFoto.launch("image/*"));
+        fabNovaFoto.setOnClickListener(v -> tirarFoto());
     }
 
+//    Configuração do Cloduinary, onde vamos enviar as fotos da câmera/galeria
     private void configurarCloudinary() {
         // Não repete a inicialização ao recriar a Activity.
         if (!cloudinaryConfigurado) {
@@ -56,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
             cloudinaryConfigurado = true;
         }
     }
-
+// Enviar ao Cloudinary
     private void enviarFoto(Uri fotoUri) {
+        fabGaleria.setEnabled(false);
         fabNovaFoto.setEnabled(false);
         txtVazio.setVisibility(View.GONE);
         progress.setVisibility(View.VISIBLE);
@@ -114,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             if (isFinishing() || isDestroyed()) return;
 
             progress.setVisibility(View.GONE);
+            fabGaleria.setEnabled(true);
             fabNovaFoto.setEnabled(true);
             // Retira apenas o ícone de feed vazio ao mostrar o resultado.
             txtVazio.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
@@ -121,5 +136,11 @@ public class MainActivity extends AppCompatActivity {
             txtVazio.setVisibility(View.VISIBLE);
 
         });
+    }
+
+    private void tirarFoto() {
+        File arquivo = new File(getExternalFilesDir(null), "2G_foto_" + System.currentTimeMillis() + ".jpg");
+        fotoUri = FileProvider.getUriForFile(this, getPackageName() + ".fileprovider", arquivo);
+        cameraLauncher.launch(fotoUri);
     }
 }

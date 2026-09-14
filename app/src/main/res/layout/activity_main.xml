@@ -74,4 +74,17 @@
         app:elevation="6dp"
         app:tint="@color/marinho" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="88dp"
+        android:contentDescription="@string/acao_nova_foto"
+        android:src="@drawable/ic_galeria"
+        app:backgroundTint="@color/ambar"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:tint="@color/marinho" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
